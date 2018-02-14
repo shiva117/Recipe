@@ -42,8 +42,8 @@ public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {
 		target.setUrl(source.getUrl());
 		target.setNotes(noteConverter.convert(source.getNotes()));
 
-		if (source.getIngradients() != null && source.getIngradients().size() > 0) {
-			source.getIngradients()
+		if (source.getIngredients() != null && source.getIngredients().size() > 0) {
+			source.getIngredients()
 					.forEach(ingradient -> target.getIngredients().add(ingredientConverter.convert(ingradient)));
 		}
 
